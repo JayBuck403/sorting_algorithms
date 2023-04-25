@@ -10,8 +10,8 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	long unsigned int i;
-	long unsigned int j;
+	unsigned long int i;
+	unsigned long int j;
 
 	for (i = 0; i < size; i++)
 	{
@@ -19,7 +19,7 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[j] > array[j + 1])
 			{
-				long unsigned int temp;
+				unsigned long int temp;
 
 				temp = array[i];
 				array[j] = array[j + 1];
