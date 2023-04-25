@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdbool.h>
 
 /**
  * bubble_sort - sorting algorithm that swaps adjacent
@@ -13,12 +12,9 @@ void bubble_sort(int *array, size_t size)
 {
 	unsigned long int i;
 	unsigned long int j;
-	bool swapped;
 
-	i = 0;
-
-	do {
-		swapped = false;
+	for (i = 0; i < size; i++)
+	{
 		for (j = 0; j < (size - 1 - i); j++)
 		{
 			if (array[j] > array[j + 1])
@@ -28,10 +24,8 @@ void bubble_sort(int *array, size_t size)
 				temp = array[j];
 				array[j] = array[j + 1];
 				array[j + 1] = temp;
-				swapped = true;
 				print_array(array, size);
 			}
 		}
-		i++;
-	} while (swapped);
+	}
 }
