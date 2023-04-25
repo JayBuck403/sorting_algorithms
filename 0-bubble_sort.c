@@ -2,7 +2,7 @@
 
 /**
  * bubble_sort - sorting algorithm that swaps adjacent
- * 		elements if they are in wrong order.
+ *		elements if they are in wrong order.
  * @array: pointer to the array to be sorted
  * @size: size of the array to be sorted
  * Return: void
@@ -19,8 +19,10 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[j] > array[j + 1])
 			{
-				long unsigned int temp = array[j];
-				array[j] = array[j +1];
+				long unsigned int temp;
+
+				temp = array[i];
+				array[j] = array[j + 1];
 				array[j + 1] = temp;
 				print_array(array, size);
 			}
